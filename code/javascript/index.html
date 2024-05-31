@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Advent of Code Day 1
+	</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+	<section class="container mt-3">
+		<h1>Select a File</h1>
+		<input id="selectedFile" class="form-control mt-5 w-25" type="file" /><br>
+		<button type="button" id="parseDataButton" class="btn btn-primary mt-3">Parse Data</button>
+		<div class="row mt-3">
+			<div class="col">
+				<pre id="inputText"></pre>
+			</div>
+			<div class="col">
+				<h2 id="output"></h2>
+			</div>
+		</div>
+	</section>
+	<script>
+		const selectedFileElement = document.getElementById("selectedFile");
+		const inputTextElement = document.getElementById("inputText");
+		const outputElement = document.getElementById("output");
+		const parseDataButtonElement = document.getElementById("parseDataButton");
+
+		function getInputFileText(event) {
+			const file = event.target.files[0];
+			const reader = new FileReader();
+			reader.onload = function(e) {
+				inputTextElement.innerText = e.target.result;
+			};
+			reader.readAsText(file);
+		}
+
+		function parseData(event) {
+			const inputText = inputTextElement.innerText;
+			const twoDigitIntegers = [];
+			const inputArray = inputText.split('\n')
+			inputArray.forEach((line) => {
+				const digitsOnLine = [];
+				const characters = line.split('');
+				characters.forEach((character) => {
+					if (!isNaN(parseInt(character))) {
+						digitsOnLine.push(parseInt(character));
+					}
+				});
+				if (digitsOnLine.length === 1) {
+					let firstDigit = digitsOnLine[0];
+					let twoDigitInteger = firstDigit * 10 + firstDigit;
+					twoDigitIntegers.push(twoDigitInteger);
+				} else if (digitsOnLine.length > 1) {
+					let firstDigit = digitsOnLine[0];
+					let lastDigit = digitsOnLine[digitsOnLine.length - 1];
+					let twoDigitInteger = firstDigit * 10 + lastDigit;
+					twoDigitIntegers.push(twoDigitInteger);
+				}
+			});
+			outputElement.innerText = twoDigitIntegers.reduce((partialSum, next) => partialSum + next);
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			selectedFileElement.addEventListener('change', getInputFileText);
+			parseDataButtonElement.addEventListener('click', parseData);
+		});
+	</script>
+</body>
