@@ -19,11 +19,11 @@ The problem description is not reproduced here.  The about page explicitly asks 
 
 ## What's in this repo
 
-A javascript solution by Justin Triplett.
-A perl solution by Jim McQuillan.  He addresses both parts of the problem.
-A python solution by Wolf.  He addresses both parts of the problem.
-A rust solution, again by Justin Triplett.
-A swift solution by Dave Satwicz.
+* A javascript solution by Justin Triplett.
+* A perl solution by Jim McQuillan.  He addresses both parts of the problem.
+* A python solution by Wolf.  He addresses both parts of the problem.
+* A rust solution, again by Justin Triplett.
+* A swift solution by Dave Satwicz.
 
 ## What's _not_ in this repo, and why
 
