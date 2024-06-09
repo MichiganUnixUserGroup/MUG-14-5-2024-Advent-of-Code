@@ -1,4 +1,4 @@
-# MUG-2024-5-14-Advent-of-Code
+# MUG-2024-05-14-Advent-of-Code
 Code discussed in our May 14th meeting.  If you clone it, use a shorter name locally.
 
 ## What we did at this MUG meeting
