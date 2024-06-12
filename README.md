@@ -19,6 +19,7 @@ The problem description is not reproduced here.  The about page explicitly asks 
 
 ## What's in this repo
 
+* A bash pipe solution by John Gruber.  He addresses part two of the problem.
 * A javascript solution by Justin Triplett.
 * A perl solution by Jim McQuillan.  He addresses both parts of the problem.
 * A python solution by Wolf.  He addresses both parts of the problem.
@@ -27,6 +28,6 @@ The problem description is not reproduced here.  The about page explicitly asks 
 
 ## What's _not_ in this repo, and why
 
-John Gruber and someone else from the audience wrote unique solutions during the presentation.  They then showed and described their answers.  We would love to get those solutions into this repo.  We're going to re-watch the YouTube video and reach out to those people.
+We are still looking for the other presenter from the audience who wrote a unique solution during the presentation.  We would love to get this solution into this repo.  We're going to re-watch the YouTube video and reach out to that person.
 
 Note as described above, this repo does not contain the final answers or input data (both are unique to the participant).  You wouldn't get the same answer with _your_ data file, an answer from the repo wouldn't be correct, and wouldn't get you to part two of the problem.
